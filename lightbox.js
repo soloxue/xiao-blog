@@ -7,6 +7,7 @@
   if (!figs.length) return;
 
   var overlay, stage, img, caption, hint, zoomed = false, lastFocus = null;
+  var zh = document.documentElement.lang.indexOf("zh") === 0;
 
   function build() {
     overlay = document.createElement("div");
@@ -32,7 +33,7 @@
 
     hint = document.createElement("p");
     hint.className = "lightbox-hint";
-    hint.textContent = "Click the image for full size · Esc to close";
+    hint.textContent = zh ? "点击图片查看原图 · Esc 关闭" : "Click the image for full size · Esc to close";
 
     stage.appendChild(img);
     overlay.appendChild(closeBtn);
@@ -57,8 +58,8 @@
     zoomed = z;
     stage.classList.toggle("lightbox-stage--zoomed", zoomed);
     hint.textContent = zoomed
-      ? "Click to fit · Esc to close"
-      : "Click the image for full size · Esc to close";
+      ? (zh ? "点击适应屏幕 · Esc 关闭" : "Click to fit · Esc to close")
+      : (zh ? "点击图片查看原图 · Esc 关闭" : "Click the image for full size · Esc to close");
   }
 
   function open(fig) {

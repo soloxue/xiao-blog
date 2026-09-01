@@ -381,49 +381,6 @@ a:hover { color: var(--oxblood-deep); }
 }
 .shelf .bill--row { grid-template-columns: 12rem 1fr; }
 
-/* ---------- Interval (notes teaser) ---------- */
-
-.interval {
-  padding-block: 1rem clamp(4rem, 9vh, 6rem);
-}
-
-.interval-card {
-  display: block;
-  text-align: center;
-  padding: clamp(2.5rem, 6vh, 3.75rem) 1.5rem;
-  background: var(--paper-deep);
-  border: 1px solid var(--rule);
-  color: inherit;
-  transition: border-color 0.3s ease, background-color 0.3s ease;
-}
-.interval-card:hover {
-  border-color: var(--gold);
-  background: var(--paper);
-  color: inherit;
-}
-
-.interval-eyebrow {
-  margin: 0 0 0.75rem;
-  font-size: 0.71875rem;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: var(--gold);
-}
-
-.interval-title {
-  margin: 0 0 0.75rem;
-  font-family: var(--serif-display);
-  font-weight: 500;
-  font-size: clamp(1.625rem, 4vw, 2.125rem);
-}
-
-.interval-note {
-  margin: 0 auto;
-  max-width: 34rem;
-  color: var(--ink-soft);
-  font-size: 1rem;
-}
-
 /* ---------- Footer ---------- */
 
 .footer {
@@ -456,16 +413,6 @@ a:hover { color: var(--oxblood-deep); }
   text-align: center;
   padding: clamp(3.25rem, 8vh, 5.25rem) 1.5rem clamp(2.75rem, 7vh, 4.25rem);
 }
-
-.article-head .back {
-  display: inline-block;
-  margin-bottom: 2.25rem;
-  font-size: 0.78125rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--stage-ink-soft);
-}
-.article-head .back:hover { color: var(--stage-ink); }
 
 .article-eyebrow {
   margin: 0 0 1.125rem;
@@ -726,15 +673,6 @@ a:hover { color: var(--oxblood-deep); }
 
 .page-plain p { font-size: 1.125rem; line-height: 1.72; }
 
-.page-plain .coming {
-  margin-top: 2.5rem;
-  padding: 2rem 1.75rem;
-  border: 1px solid var(--rule);
-  background: var(--paper-deep);
-  text-align: center;
-  font-style: italic;
-  color: var(--ink-soft);
-}
 
 .monogram {
   width: 4.5rem;
@@ -790,11 +728,6 @@ a:hover { color: var(--oxblood-deep); }
   margin-bottom: 0.625rem;
 }
 .eyebrow-row .bill-genre { margin: 0; }
-
-.bill-genre-sub {
-  font-size: 0.75rem;
-  color: var(--ink-faint);
-}
 
 .more {
   font-size: 0.8125rem;
@@ -952,7 +885,6 @@ a.lang-opt--disabled:hover { color: var(--stage-ink-soft); background: none; }
 
 @media (max-width: 700px) {
   .shelf-grid, .shelf-grid--2 { grid-template-columns: 1fr; }
-  .shelf-duo { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 560px) {
@@ -1054,7 +986,7 @@ a.lang-opt--disabled:hover { color: var(--stage-ink-soft); background: none; }
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
-  .masthead, .article-head .back, .end-nav { display: none; }
+  .masthead, .masthead, .end-nav { display: none; }
   .lightbox { display: none !important; }
   .plate--max { max-width: 100%; translate: none; margin-inline: auto; margin-block: 1.25rem 2rem; }
   .plate, .lyric, .verse, .epigraph, .divider { break-inside: avoid; }
