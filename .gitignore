@@ -1,0 +1,20 @@
+# Notes to ignore — local editor/OS noise
+.claude/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Design working docs (kept locally, not published)
+DESIGN.md
+works/*/design.md
+
+# Source images (WebP versions are live on the site)
+*.png
+logo.psd
+
+# PDF exports (generated on demand)
+*.pdf
+
+# The stray empty folder from an earlier rename
+works/8th rank/
+premium-audit.json
