@@ -10,10 +10,11 @@
   --paper-deep: #eae8f0;
   --ink: #262230;
   --ink-soft: #5f5870;
-  --ink-faint: #8b8499;
+  --ink-faint: #6f6880;
   --oxblood: #7e2b3a;
   --oxblood-deep: #63202c;
   --gold: #a2834b;
+  --gold-ink: #85682f;   /* gold for small text on light paper (AA ≥ 4.5:1) */
   --stage: #171420;
   --stage-ink: #ede9e1;
   --stage-ink-soft: #a89f96;
@@ -173,19 +174,30 @@ a:hover { color: var(--oxblood-deep); }
   display: flex;
   justify-content: center;
   gap: 0.625rem;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 .stage-tick {
   width: 1.5rem;
-  height: 2px;
+  height: 1rem;
   padding: 0;
   border: 0;
-  background: rgba(168, 159, 150, 0.4);
+  background: transparent;
   cursor: pointer;
+  position: relative;
+}
+.stage-tick::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+  margin-top: -1px;
+  background: rgba(168, 159, 150, 0.4);
   transition: background-color 0.3s ease;
 }
-.stage-tick:hover { background: var(--stage-ink-soft); }
-.stage-tick[aria-current="true"] { background: var(--gold); }
+.stage-tick:hover::before { background: var(--stage-ink-soft); }
+.stage-tick[aria-current="true"]::before { background: var(--gold); }
 
 /* Featured cards (home shelf) */
 .shelf-grid {
@@ -229,7 +241,7 @@ a:hover { color: var(--oxblood-deep); }
   align-items: center;
   justify-content: center;
   border-style: dashed;
-  color: var(--gold);
+  color: var(--gold-ink);
   font-size: 1.5rem;
 }
 .card-note--soon {
@@ -250,7 +262,7 @@ a:hover { color: var(--oxblood-deep); }
 }
 .tile-soon .tile-glyph {
   font-size: 1.375rem;
-  color: var(--gold);
+  color: var(--gold-ink);
   line-height: 1;
 }
 .tile-soon .tile-name {
@@ -328,7 +340,7 @@ a:hover { color: var(--oxblood-deep); }
   font-size: 0.8125rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 
 .bill-title {
@@ -431,7 +443,7 @@ a:hover { color: var(--oxblood-deep); }
   font-size: 0.71875rem;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 
 .article-title {
@@ -562,7 +574,7 @@ a:hover { color: var(--oxblood-deep); }
   transform: translate(-50%, -52%);
   background: var(--paper);
   padding-inline: 0.75rem;
-  color: var(--gold);
+  color: var(--gold-ink);
   font-size: 0.9375rem;
   line-height: 1;
 }
@@ -584,7 +596,7 @@ a:hover { color: var(--oxblood-deep); }
   font-size: 0.8125rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 
 /* End notes (John Locke essay) */
@@ -635,7 +647,7 @@ a:hover { color: var(--oxblood-deep); }
   font-size: 0.71875rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 
 .end-prev { text-align: left; }
@@ -673,7 +685,7 @@ a:hover { color: var(--oxblood-deep); }
   padding-block: clamp(3.5rem, 9vh, 6rem) clamp(3rem, 8vh, 5rem);
 }
 
-.page-plain .article-eyebrow { color: var(--gold); }
+.page-plain .article-eyebrow { color: var(--gold-ink); }
 
 .page-plain h1 {
   font-family: var(--serif-display);
@@ -726,7 +738,7 @@ a:hover { color: var(--oxblood-deep); }
   background: var(--rule);
 }
 .shelf-sep span {
-  color: var(--gold);
+  color: var(--gold-ink);
   font-size: 0.9375rem;
   line-height: 1;
 }
@@ -983,7 +995,7 @@ a.lang-opt--disabled:hover { color: var(--stage-ink-soft); background: none; }
 
 .lightbox-hint {
   margin: 0.375rem 0 0;
-  color: var(--ink-faint);
+  color: var(--stage-ink-soft);
   text-align: center;
   font-size: 0.75rem;
   max-width: calc(100vw - 2.5rem);
@@ -1056,7 +1068,7 @@ a.lang-opt--disabled:hover { color: var(--stage-ink-soft); background: none; }
   font-size: 0.8125rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-ink);
   white-space: nowrap;
 }
 .note-row h2, .note-row h3 {

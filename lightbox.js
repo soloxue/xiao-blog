@@ -14,12 +14,12 @@
     overlay.className = "lightbox";
     overlay.setAttribute("role", "dialog");
     overlay.setAttribute("aria-modal", "true");
-    overlay.setAttribute("aria-label", "Enlarged image");
+    overlay.setAttribute("aria-label", zh ? "查看放大的图片" : "Enlarged image");
 
     var closeBtn = document.createElement("button");
     closeBtn.className = "lightbox-close";
     closeBtn.type = "button";
-    closeBtn.setAttribute("aria-label", "Close");
+    closeBtn.setAttribute("aria-label", zh ? "关闭" : "Close");
     closeBtn.textContent = "×";
 
     stage = document.createElement("div");
@@ -51,6 +51,12 @@
       if (!overlay.classList.contains("is-open")) return;
       if (e.key === "Escape") close();
       if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setZoom(!zoomed); }
+      /* Focus trap: the close button is the dialog's only focusable element,
+         so keep Tab inside the overlay. */
+      if (e.key === "Tab") {
+        e.preventDefault();
+        overlay.querySelector(".lightbox-close").focus();
+      }
     });
   }
 
@@ -92,7 +98,7 @@
     fig.classList.add("plate--zoomable");
     fig.setAttribute("tabindex", "0");
     fig.setAttribute("role", "button");
-    fig.setAttribute("aria-label", "View image enlarged");
+    fig.setAttribute("aria-label", zh ? "放大查看图片" : "View image enlarged");
     fig.addEventListener("click", function () { open(fig); });
     fig.addEventListener("keydown", function (e) {
       if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(fig); }
