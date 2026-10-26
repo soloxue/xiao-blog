@@ -1,0 +1,13 @@
+* text=auto
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.cjs text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.svg text eol=lf
+*.txt text eol=lf
+*.woff2 binary
+*.webp binary
+# Preserve upstream licence text, including its original whitespace.
+fonts/OFL-*.txt -whitespace

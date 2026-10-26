@@ -1,182 +1,136 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Xiaoxiao — a writer's notebook</title>
-<meta name="description" content="Stories, essays and occasional notes from the stalls, by Xiaoxiao.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%237E2B3A'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' fill='%23F3F2F6' text-anchor='middle'%3EX%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Writing, notes from the stalls, and a director’s stage record.">
+  <title>Xiaoxiao — Writing and notes from the stalls</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=20261025-article-design">
+  <script src="app.js?v=20261025-article-design" defer></script>
 </head>
-<body class="home">
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<header class="masthead">
-  <div class="wrap masthead-row">
-    <span class="masthead-name"><img src="logo-main.webp" width="1200" height="355" alt="Xiaoxiao"></span>
-    <nav class="masthead-nav" aria-label="Main">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="works.html">Works</a>
-      <a href="notes.html">Notes</a>
-      <a href="stage.html">Stage</a>
-      <a href="about.html">About</a>
-    </nav>
-    <div class="lang-switch" role="group" aria-label="Language / 语言">
-      <a class="lang-opt" href="index.zh.html" hreflang="zh-CN" lang="zh-CN" aria-label="切换到中文">中文</a>
-      <span class="lang-opt is-current" lang="en" aria-current="true">EN</span>
+  <header class="site-header">
+    <div class="header-inner">
+      <span class="brand"><img src="logo-main.webp" width="1200" height="355" alt="Xiaoxiao"></span>
+      <input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="Open or close navigation" aria-controls="site-nav" data-menu-toggle>
+      <label class="menu-button" for="menu-toggle" aria-hidden="true"><span></span></label>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation" data-site-nav>
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="works/index.html">Works</a>
+        <a href="notes/index.html">Notes</a>
+        <a href="stage/index.html">Stage</a>
+        <a href="index.html#about">About</a>
+      </nav>
+      <div class="language-switch" role="group" aria-label="Language"><a class="language-option" href="index.cn.html" lang="zh-CN" hreflang="zh-CN">中文</a><span class="language-option is-current" lang="en" aria-current="true">En</span></div>
     </div>
-  </div>
-</header>
+  </header>
 
-<main>
-  <section class="stage" aria-label="Introduction">
-    <div class="stage-inner">
-      <h1 class="visually-hidden">Xiaoxiao &mdash; a writer&rsquo;s notebook</h1>
-      <div class="stage-quote" id="stage-quote">
-        <a class="stage-quote-link" href="works/the-eighth-rank/index.html">
-          <span class="stage-quote-text">We are all music briefly, and then silence.</span>
-          <span class="stage-quote-src">The Eighth Rank</span>
-        </a>
-      </div>
-      <div class="stage-ticks" id="stage-ticks" aria-label="Quotes"></div>
-    </div>
-  </section>
-
-  <section class="shelf wrap">
-    <h2 class="visually-hidden">Highlights</h2>
-
-    <div class="shelf-block">
-      <div class="eyebrow-row">
-        <p class="bill-genre">Featured works</p>
-        <a class="more" href="works.html">All works &rarr;</a>
-      </div>
-<div class="shelf-grid">
-        <article class="card">
-          <a class="card-thumb" href="works/the-eighth-rank/index.html" aria-hidden="true" tabindex="-1"><img src="works/the-eighth-rank/8th-01-cover.webp" width="1600" height="900" alt="" loading="lazy"></a>
-          <h3 class="card-title"><a href="works/the-eighth-rank/index.html">The Eighth Rank</a></h3>
-          <p class="bill-genre">Fiction</p>
-          <p class="card-note">A pawn of the Wars of the Roses walks from Towton to Bosworth &mdash; and finds that promotion is not an exit from the board.</p>
-        </article>
-        <article class="card">
-          <a class="card-thumb" href="works/on-neuroscience-and-religious-experience/index.html" aria-hidden="true" tabindex="-1"><img src="works/on-neuroscience-and-religious-experience/neuro-01-cover.webp" width="1600" height="900" alt="" loading="lazy"></a>
-          <h3 class="card-title"><a href="works/on-neuroscience-and-religious-experience/index.html">On Neuroscience and Religious Experience</a></h3>
-          <p class="bill-genre">Essay</p>
-          <p class="card-note">Hume, William James and the fMRI scanner: what neuroscience can and cannot say about religious experience.</p>
-        </article>
-        <article class="card">
-          <a class="card-thumb" href="works/florilegium/index.html" aria-hidden="true" tabindex="-1"><img src="works/florilegium/flo-01-cover.webp" width="1600" height="900" alt="" loading="lazy"></a>
-          <h3 class="card-title"><a href="works/florilegium/index.html">Florilegium</a></h3>
-          <p class="bill-genre">Verse</p>
-          <p class="card-note">Five flowers that bloom against their nature: the rafflesia, the witch hazel, the poppy, the queen of the night, the tumbleweed.</p>
-        </article>
-      </div>
-    </div>
-    <div class="shelf-sep" aria-hidden="true"><span>&#10086;</span></div>
-    <div class="shelf-block">
-      <div class="eyebrow-row">
-        <p class="bill-genre">From the stalls</p>
-        <a class="more" href="notes.html">Notes &rarr;</a>
-      </div>
-      <div class="shelf-grid">
-        <article class="card">
-          <a class="card-thumb" href="notes/2026-08-23-thomas-bergersen/index.html" aria-hidden="true" tabindex="-1"><img src="notes/2026-08-23-thomas-bergersen/tb-01.webp" width="1440" height="766" alt="" loading="lazy"></a>
-          <h3 class="card-title"><a href="notes/2026-08-23-thomas-bergersen/index.html">Victory — Thomas Bergersen, Live in Shanghai</a></h3>
-          <p class="bill-genre">23 Aug 2026 · Shanghai</p>
-          <p class="card-note">Goosebumps from the first note to the last &mdash; classical orchestra meets electronics.</p>
-        </article>
-        <article class="card">
-          <div class="card-thumb card-thumb--soon" aria-hidden="true">&#10086;</div>
-          <h3 class="card-title">Opera</h3>
-          <p class="card-note card-note--soon">Rehearsing &mdash; the house opens shortly.</p>
-        </article>
-        <article class="card">
-          <div class="card-thumb card-thumb--soon" aria-hidden="true">&#10086;</div>
-          <h3 class="card-title">Musicals</h3>
-          <p class="card-note card-note--soon">Rehearsing &mdash; the house opens shortly.</p>
-        </article>
-      </div>
-    </div>
-
-    <div class="shelf-sep" aria-hidden="true"><span>&#10086;</span></div>
-    <div class="shelf-block">
-      <div class="eyebrow-row">
-        <p class="bill-genre">On stage</p>
-        <a class="more" href="stage.html">Stage &rarr;</a>
-      </div>
-      <div class="shelf-grid shelf-grid--2">
-        <div class="tile-soon">
-          <span class="tile-glyph" aria-hidden="true">&#9834;</span>
-          <p class="tile-name">School band</p>
-          <p class="tile-line">A record of making, not certificates.</p>
+  <main id="main">
+    <section class="aperture-hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Words · Stalls · Stage</p>
+        <h1 class="hero-title" id="hero-title"><span>There is no<br>grave</span><em>for rafflesia.</em></h1>
+        <div class="hero-context">
+          <p>Fiction, poems and essays by Xiaoxiao, with thoughts that linger after the curtain falls.</p>
         </div>
-        <div class="tile-soon">
-          <span class="tile-glyph" aria-hidden="true">&#9834;</span>
-          <p class="tile-name">Piano</p>
-          <p class="tile-line">A record of making, not certificates.</p>
+        <a class="hero-link" href="#works">Begin with the writing <span aria-hidden="true">→</span></a>
+      </div>
+      <figure class="aperture-figure">
+        <span class="aperture-cue" aria-hidden="true"></span>
+        <a class="aperture-image-link" href="works/florilegium/index.html" aria-label="Read Florilegium"><img src="works/florilegium/flo-01-cover.webp" width="1536" height="1024" alt="A still life of rafflesia, witch hazel, poppies, queen of the night and tumbleweed by a window"></a>
+        <figcaption>Florilegium · Rafflesia · School magazine</figcaption>
+      </figure>
+    </section>
+
+    <section class="works-section" id="works" aria-labelledby="works-heading">
+      <div class="section-shell">
+        <header class="section-heading" data-reveal>
+          <div>
+            <p class="eyebrow">Selected writing</p>
+            <h2 id="works-heading">Works</h2>
+          </div>
+          <p>Recent fiction, verse and essays, moving between stories, belief and human experience.</p>
+        </header>
+
+        <article class="featured-work" data-reveal>
+          <a class="featured-image" href="works/florilegium/index.html" aria-label="Read Florilegium">
+            <img src="works/florilegium/flo-01-cover.webp" width="1536" height="1024" alt="A vast red rafflesia on the dark rainforest floor">
+          </a>
+          <div class="featured-copy">
+            <p class="eyebrow">Verse · School magazine · <time datetime="2026-06">June 2026</time></p>
+            <h3><a href="works/florilegium/index.html">Florilegium</a></h3>
+            <p>Five plants that bloom against season, habitat, or fate: rafflesia, witch hazel, poppy, queen of the night, and tumbleweed.</p>
+          </div>
+        </article>
+
+        <ul class="work-ledger" aria-label="Three more recent works" data-reveal>
+          <li><a href="works/on-neuroscience-and-religious-experience/index.html"><span class="work-type">Essay</span><h3>On Neuroscience &amp; Religious Experience</h3><span class="work-context">Shortlisted · May 2026</span></a></li>
+          <li><a href="works/iatrogenesis/index.html"><span class="work-type">Fiction</span><h3>Iatrogenesis</h3><span class="work-context">School magazine · December 2025</span></a></li>
+          <li><a href="works/the-eighth-rank/index.html"><span class="work-type">Fiction</span><h3>The Eighth Rank</h3><span class="work-context">School magazine · June 2025</span></a></li>
+        </ul>
+        <a class="section-all-link" href="works/index.html"><span class="section-all-label">View all works</span><span class="section-all-meta"><span>6 pieces</span><span class="section-all-arrow" aria-hidden="true">→</span></span></a>
+      </div>
+    </section>
+
+    <section class="notes-section" id="notes" aria-labelledby="notes-heading">
+      <div class="section-shell">
+        <header class="section-heading" data-reveal>
+          <div>
+            <p class="eyebrow">From the stalls</p>
+            <h2 id="notes-heading">Notes</h2>
+          </div>
+          <p>Recent evenings of music and theatre, in photographs and words written after the curtain.</p>
+        </header>
+      <div class="note-feature">
+        <div class="note-copy" data-reveal>
+          <p class="eyebrow">Play · <time datetime="2026-10-23">23 Oct 2026</time></p>
+          <h3>Hamlet.</h3>
+          <blockquote>“The ending of this production was so distinctive. I loved it.”</blockquote>
+          <a class="text-link" href="notes/2026-10-23-hamlet/index.html">Read the full note</a>
+        </div>
+        <div class="note-collage" aria-label="Hamlet performance photographs" data-reveal>
+          <figure><a href="notes/2026-10-23-hamlet/index.html" aria-label="Read the Hamlet note"><img src="notes/2026-10-23-hamlet/hamlet-03.webp" width="1920" height="1080" alt="Actors on a two-level stage under blue lighting"></a></figure>
+          <figure><a href="notes/2026-10-23-hamlet/index.html" aria-label="Read the Hamlet note"><img src="notes/2026-10-23-hamlet/hamlet-01.webp" width="1440" height="738" alt="Hamlet performance information display at the theatre"></a></figure>
         </div>
       </div>
+        <ul class="work-ledger note-ledger" aria-label="Three more recent notes" data-reveal>
+          <li><a href="notes/2026-09-24-french-musical-gala/index.html"><span class="work-type">Concert · Shanghai</span><h3>A night of French musicals.</h3><span class="work-context"><time datetime="2026-09-24">24 Sep 2026</time></span></a></li>
+          <li><a href="notes/2026-08-23-thomas-bergersen/index.html"><span class="work-type">Concert · Shanghai</span><h3>Victory, live.</h3><span class="work-context"><time datetime="2026-08-23">23 Aug 2026</time></span></a></li>
+          <li><a href="notes/2026-05-30-the-orphan-of-zhao/index.html"><span class="work-type">Chinese musical</span><h3>The Orphan of Zhao</h3><span class="work-context"><time datetime="2026-05-30">30 May 2026</time></span></a></li>
+        </ul>
+        <a class="section-all-link" href="notes/index.html"><span class="section-all-label">View all notes</span><span class="section-all-meta"><span>9 notes</span><span class="section-all-arrow" aria-hidden="true">→</span></span></a>
+      </div>
+    </section>
+
+    <section class="home-stage" id="stage" aria-labelledby="home-stage-heading">
+      <div class="section-shell home-stage-grid">
+        <div class="home-stage-copy">
+          <p class="eyebrow">Behind the scenes · 18 Nov 2025</p>
+          <h2 id="home-stage-heading">Stage</h2>
+          <h3><a href="stage/2025-11-18-xu-guangqi-matteo-ricci/index.html">Xu Guangqi &amp; Matteo Ricci</a></h3>
+          <p>A school original directed by Xiaoxiao. From summer preparations to a full black box, she and her fellow students brought the play to the stage.</p>
+          <a class="text-link" href="stage/index.html">Explore Stage <span aria-hidden="true">→</span></a>
+        </div>
+        <a class="home-stage-image" href="stage/2025-11-18-xu-guangqi-matteo-ricci/index.html" aria-label="Read the director's note on Xu Guangqi and Matteo Ricci" ><img src="stage/2025-11-18-xu-guangqi-matteo-ricci/stage-07.webp" width="1080" height="1080" loading="lazy" alt="Collage of scenes from the school production"></a>
+      </div>
+    </section>
+
+    <section class="home-about" id="about" aria-labelledby="home-about-heading">
+      <div class="section-shell home-about-grid">
+        <div><p class="eyebrow">About this archive</p><h2 id="home-about-heading">About Xiaoxiao</h2></div>
+        <p>Xiaoxiao reads Tolkien and Shakespeare and loves an evening at the theatre. Here are her writings, alongside the echoes of concerts and plays.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 2026 Xiaoxiao</p>
+      <p>Private visual prototype · Not for publication</p>
     </div>
-
-</section>
-</main>
-
-<footer class="footer">
-  <div class="wrap footer-row">
-    <p>&copy; 2026 Xiaoxiao</p>
-  </div>
-</footer>
-
-<script>
-  (function () {
-    var quotes = [
-      { text: 'We are all music briefly, and then silence.', src: 'The Eighth Rank', href: 'works/the-eighth-rank/index.html' },
-      { text: 'There is no grave for rafflesia.', src: 'Florilegium', href: 'works/florilegium/index.html' },
-      { text: 'Kings are only common men permitted to want aloud.', src: 'The Eighth Rank', href: 'works/the-eighth-rank/index.html' },
-      { text: 'The desert does not answer. It never does.', src: 'Ozymandias', href: 'works/ozymandias/index.html' },
-      { text: '…it survives on catharsis: on laughter, on release, on the psychic heat of the crowd.', src: 'Iatrogenesis', href: 'works/iatrogenesis/index.html' }
-    ];
-    var box = document.getElementById('stage-quote');
-    if (!box) return;
-    var link = box.querySelector('a');
-    var textEl = box.querySelector('.stage-quote-text');
-    var srcEl = box.querySelector('.stage-quote-src');
-    var ticksBox = document.getElementById('stage-ticks');
-    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var i = 0, timer = null;
-
-    var ticks = quotes.map(function (q, n) {
-      var b = document.createElement('button');
-      b.type = 'button';
-      b.className = 'stage-tick';
-      b.setAttribute('aria-label', 'Quote ' + (n + 1) + ' / ' + quotes.length);
-      b.addEventListener('click', function () { show(n); restart(); });
-      ticksBox.appendChild(b);
-      return b;
-    });
-
-    function apply(q) { link.href = q.href; textEl.textContent = q.text; srcEl.textContent = q.src; }
-    function mark() { ticks.forEach(function (t, n) { t.setAttribute('aria-current', n === i ? 'true' : 'false'); }); }
-    function show(n) {
-      i = n;
-      var q = quotes[n];
-      if (reduce) { apply(q); mark(); return; }
-      box.classList.add('is-fading');
-      setTimeout(function () { apply(q); mark(); box.classList.remove('is-fading'); }, 380);
-    }
-    mark();
-
-    function restart() { if (timer) clearInterval(timer); if (!reduce) timer = setInterval(function () { show((i + 1) % quotes.length); }, 2500); }
-    var stage = document.querySelector('.stage');
-    if (stage) {
-      stage.addEventListener('mouseenter', function () { if (timer) clearInterval(timer); timer = null; });
-      stage.addEventListener('mouseleave', restart);
-      stage.addEventListener('focusin', function () { if (timer) clearInterval(timer); timer = null; });
-      stage.addEventListener('focusout', restart);
-    }
-    restart();
-  })();
-</script>
+  </footer>
 </body>
 </html>
